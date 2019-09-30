@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<style type="text/css">
+		.container{
+			width: 800px;
+			height: 300px;
+			padding: 10px;
+			margin: 10px;
+			border: 10px solid #2c3e33;
+			
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+
+
+			/* Arranca la posición desde arriba */
+			align-items: flex-start;
+
+			/* Arranca la posición desde abajo */
+			align-items: flex-end;
+
+			/* Posiciona los elementos centrados de manera vertical */
+			align-items: center;
+
+			/* Hace que tome el alto el contenedor (no debo tener height en los elementos) */
+			align-items: stretch;
+
+
+
+
+		}
+
+		.column{
+			margin: 5px;
+			padding: 5px;
+			background-color: #E67e33;
+			font-size: 30px;
+			color: #fff;
+			width: 50px;
+			height: 50px;
+			text-align: center;
+		}
+	
+	</style>
+</head>
+<body>
+
+	<div class="container">
+	  <div class="column">
+	  	1
+	  </div>
+	  <div class="column">
+	  	2 
+	  </div>
+	  <div class="column">
+	  	3 
+	  </div>
+	  <div class="column">
+	  	4 
+	  </div>
+	</div>
+
+</body>
+</html>
