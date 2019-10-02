@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>Columnas</title>
+	<style type="text/css">
+
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.container{
+			max-width: 1000px;
+			margin: auto;
+			border: 1px solid red;
+			min-height: 1800px;
+			padding: 15px;
+		}
+
+		.row100{
+			clear: both;
+		}
+
+		/* Con el selector > tomo la primera línea de divs hijos que estén dentro del contenedor .row100
+		La idea es que si tengo un div dentro de mis divs que uso para hacer de columnas no sean afectados por estas propiedades 
+		Ej: 
+		<div class="row100">
+			<div>
+				Esta es mi columna del 100%
+				<div>
+					Este div no va a ser afectado con estos valores:
+					width: 100%;
+					display: inline-block;
+					float: left;
+				</div>
+			</div>
+		</div>
+
+		*/
+
+		.row100 > div {
+			width: 100%;
+			display: inline-block;
+			float: left;
+		}
+
+		.row50{
+			clear: both;
+		}
+
+		.row50 > div {
+			width: 50%;
+			display: inline-block;
+			float: left;
+		}
+
+		.row33{
+			clear: both;
+		}
+
+		.row33 > div {
+			width: 33%;
+			display: inline-block;
+			float: left;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row100">
+			<div>esto va al 100%</div>
+		</div>
+
+		<div class="row50">
+			<div>esto va al 50%</div>
+			<div>esto va al 50%</div>
+		</div>
+
+		<div class="row33">
+			<div>esto va al 33%</div>
+			<div>esto va al 33%</div>
+			<div>esto va al 33%</div>
+			<div>esto va al 33%</div>
+			<div>esto va al 33%</div>
+			<div>esto va al 33%</div>
+		</div>
+	</div>
+</body>
+</html>

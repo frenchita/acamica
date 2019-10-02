@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title>test</title>
+	<style type="text/css">
+
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.container{
+			max-width: 800px;
+			margin: auto;
+			border: 1px solid red;
+			min-height: 800px;
+			padding: 10px;
+		}
+
+		.row{
+
+			clear: both;
+		}
+
+		.izquierda{
+			width: 50%;
+			border: 1px solid green;
+			/* box-sizing: Para que el pixel que pongo de border entre dentro del tamaño de la caja */
+			box-sizing: border-box; 
+
+			/* Por default es display: block; */
+			float: left;
+			
+		}
+		.derecha{
+			width: 50%;
+			border: 1px solid green;
+			box-sizing: border-box;
+			
+			/* Por default es display: block; */
+			float: left;
+			
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="izquierda">hola izquierda</div>
+			<div class="derecha">hola derecha</div>
+		</div>
+
+		<!--
+
+			Puede repetir este modelo de row + izquierda + derecha las veces que necesito
+
+		<div class="row">
+			<div class="izquierda">hola izquierda</div>
+			<div class="derecha">hola derecha</div>
+		</div>
+
+		<div class="row">
+			<div class="izquierda">hola izquierda</div>
+			<div class="derecha">hola derecha</div>
+		</div>
+
+		-->
+		
+	</div>
+
+
+</body>
+</html>
