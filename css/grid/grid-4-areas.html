@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Grid</title>
+	<style type="text/css">
+		.container{
+			max-width: 500px;
+			min-height: 300px;
+			padding: 15px;
+			margin: auto;
+			border: 10px solid #2c3e33;
+
+			display: grid;
+			grid-gap: 20px;
+			
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-areas: "header 	header 		header"
+								 "contenido contenido 	sidebar"
+								 "author	author		sidebar"
+								 "footer	footer		footer";
+			
+		}
+
+		.container #header{
+			background-color: red;
+			grid-column-start: header;
+			grid-column-end: header;
+		}
+
+		.container #contenido{
+			background-color: red;
+			grid-column-start: contenido;
+			grid-column-end: contenido;
+		}
+
+		.container #sidebar{
+			background-color: green;
+			grid-column-start: sidebar;
+			grid-column-end: sidebar;
+			grid-row-start: sidebar;
+			grid-row-end: sidebar;
+		}
+
+		.container #author{
+			background-color: yellow;
+			grid-column-start: author;
+			grid-column-end: author;
+		}
+
+		.container #footer{
+			background-color: blue;
+			grid-column-start: footer;
+			grid-column-end: footer;
+		}
+
+
+		.container > div{
+			background-color: #E67e33;
+			font-size: 16px;
+			color: #fff;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>Grid areas</h1>
+
+	<div class="container">
+		<div id="header">1</div>
+		<div id="contenido">2</div>
+		<div id="sidebar">3</div>
+		<div id="author">4</div>
+		<div id="footer">5</div>
+	</div>
+
+</body>
+</html>

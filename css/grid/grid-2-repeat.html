@@ -9,26 +9,15 @@
 			padding: 15px;
 			margin: auto;
 			border: 10px solid #2c3e33;
+
 			display: grid;
 			
-			/* Tamaño fijo */
-			grid-template-columns: 200px 200px 200px;
-			/* Tamaño por fracciones
-			grid-template-columns: 1fr 1fr 1fr; */
-
-			/* Tamaño fijo y lo que sobra por fracciones
-			grid-template-columns: 200px 1fr 200px; */
-
-
-			/* Tamaño fijo */
-			grid-template-rows: 50px 50px 50px;
-			/* Tamaño por fracciones
-			grid-template-rows: 1fr 1fr 1fr; */
-
-			/* Tamaño fijo y lo que sobra por fracciones
-			grid-template-rows: 200px 1fr 1fr; */
+			grid-template-columns: repeat(6, 1fr);
+			/* Valor fijo y después repeat 
+			grid-template-columns: 200px repeat(6, 1fr); */
 			
-			/* Es para darle "Margen" entre cada uno de los elementos */
+			grid-template-rows: 50px 50px 50px;
+
 			grid-gap: 20px;
 		}
 
@@ -42,6 +31,8 @@
 	</style>
 </head>
 <body>
+
+	<h1>Function repeat</h1>
 
 	<div class="container">
 		<div>1</div>

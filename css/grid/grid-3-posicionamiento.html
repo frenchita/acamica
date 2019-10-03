@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Grid</title>
+	<style type="text/css">
+		.container{
+			max-width: 500px;
+			min-height: 300px;
+			padding: 15px;
+			margin: auto;
+			border: 10px solid #2c3e33;
+
+			display: grid;
+			
+			/* Digo que son 4 filas y 4 columas pero en realidad tengo 12 contenedores
+			Me genera el espacio dentro de mi contenedor */
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+			
+
+			grid-gap: 20px;
+		}
+
+		.container > div{
+			background-color: #E67e33;
+			font-size: 16px;
+			color: #fff;
+			text-align: center;
+		}
+
+		#primary {
+			background-color: blue;
+
+			/*
+			
+			grid-column-start: 1;
+			grid-column-end: 2;
+
+			*/
+
+			/*
+			grid-column-start: 2;
+			grid-column-end: 4;
+			*/
+
+			/*
+			grid-column-start: 1;
+			grid-column-end: 5;
+			*/
+
+			/* Va a estirar mi grilla a 7 columnas */
+
+			/*
+			grid-column-start: 1;
+			grid-column-end: 8;
+			*/
+
+			/*
+			grid-column-start: 1;
+			grid-column-end: -2;
+			*/
+
+
+			/**** Filas y columnas  ****/
+
+			/* En que fila quiero que empieza y que fila quiero que termine */
+
+			/*
+
+			grid-column-start: 1;
+			grid-column-end: 4;
+
+			grid-row-start: 2; 
+			grid-row-end: 4;
+
+			*/
+
+
+
+			/* 
+
+			grid-area resumen los starts y ends de columns como de rows
+
+			Los parámetros van en este orden
+
+				1 - grid-row-start
+				2 - grid-column-start
+				3 - grid-row-end
+				4 - grid-column-end
+
+			*/
+
+			/*
+
+			grid-area: 2 / 1 / 4 / 4;
+
+			*/
+
+
+
+			/* span */
+			
+
+			grid-column: 1 / span 2;
+
+
+
+
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<h1>Positions</h1>
+
+	<div class="container">
+		<div id="primary">1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+		<div>11</div>
+		<div>12</div>
+	</div>
+
+</body>
+</html>

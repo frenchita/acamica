@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Grid</title>
+	<style type="text/css">
+		.container{
+			max-width: 1000px;
+			height: 800px;
+			padding: 15px;
+			margin: auto;
+			border: 10px solid #2c3e33;
+
+			display: grid;
+			
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+
+			grid-gap: 20px;
+
+			justify-items: start;
+			/*
+			justify-items: stretch;
+			justify-items: center;
+			justify-items: end;
+			*/
+
+
+			align-items: start;
+			/*
+			align-items: end;
+			align-items: center;
+			align-items: stretch;
+			*/
+
+
+
+		}
+
+		.container #item{
+			justify-self:  stretch;
+			align-self:  stretch;
+		}
+
+		.container > div{
+			background-color: #E67e33;
+			font-size: 16px;
+			color: #fff;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>Alineaciones de elementos</h1>
+
+	<div class="container">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div id="item">5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+	</div>
+
+</body>
+</html>
