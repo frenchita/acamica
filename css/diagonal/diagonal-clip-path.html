@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagonal</title>
+
+  <style type="text/css">
+  *{
+  	margin: 0px;
+  	padding: 0px;
+  }
+
+  .clip{
+  	background-color: blue;
+  	clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  }
+
+  .my-podcast{
+  	
+  	display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	align-items: center;
+  	flex-gap: 20px;
+  }
+
+  .my-podcast > div{
+		margin: 5px;
+		padding: 5px;
+		background-color: #E67e33;
+		font-size: 30px;
+		color: #fff;
+		width: 300px;
+		height: 120px;
+		text-align: center;
+	}
+
+	section {
+		min-height: 250px;
+	}
+
+	.grilla{
+		padding: 30px;
+	  	max-width: 800px;
+	  	margin: auto;
+	}
+
+  </style>
+</head>
+
+<body>
+  <nav>
+  	<div class="grilla">
+    Logo
+    </div>
+  </nav>
+  <header>
+	<div class="grilla">
+    	<h2>HEADER</h2>
+    </div>  
+  </header>
+  <section>
+	  <div class="clip">
+	  	<div class="my-podcast grilla">
+	  		<div>Podcast 1</div>
+	  		<div>Podcast 2</div>
+	  		<div>Podcast 3</div>
+	  		<div>Podcast 4</div>
+	  	</div>	
+	  </div>
+  </section>
+  <section>
+  	<div class="grilla">
+    	<h2>Sección 2</h2>
+    </div>
+  </section>
+  <section>
+  	<div class="grilla">
+    	<h2>Sección 3</h2>
+    </div>
+  </section>
+  <section>
+    <div class="grilla">
+    	<h2>Sección 4</h2>
+    </div>
+  </section>
+</body>
+
+</html>
