@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		var tateti = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+		var jugador_numero = 0;
+		
+		for (var i = 0; i < tateti.length; i++){
+			/* Detecto si i es par o impar, esto me va a dar el sistema de turnos */
+			jugador_numero = (i % 2)? 1 : 2
+
+			/* Pido que me ingrese la posición en donde quiere */
+			jugada = prompt("Ingrese su jugada jugador número " + jugador_numero);
+
+			/* Defino una variable "bandera", cada vuelta del ciclo la paso a true. Si alguna de las validaciones falla la paso a false */
+			jugada_valida = true;
+
+			if(parseInt(jugada) > 8){
+				/* Resto 1 a i para que el ciclo retroceda una vez, de esta manera el turno sera para el mismo */
+				i--;
+				jugada_valida = false;
+			}
+
+			/* Crear resto de validaciones y pasar jugada_valida = false si alguna falla */
+
+			
+			/* Si todas las validaciones son correctas jugada_valida aún queda en true y va a entrar al siguiente if */
+
+			if(jugada_valida){
+				/* Como la jugada es valida lleno el array dentro de la posición */
+				tateti[jugada] = jugador_numero;
+				console.log(tateti);
+
+				/* Crear el resto de las validaciones */
+
+				if(
+					tateti[0] == tateti[1] && 
+					tateti[1] == tateti[2] && 
+					tateti[0] != 0
+					){
+					/* Aviso que ganó */
+					alert('Jugador ganandor ' + jugador_numero)
+
+
+					i = 10;
+				}
+
+				if(
+					tateti[3] == tateti[4] && 
+					tateti[4] == tateti[5] && 
+					tateti[3] != 0
+					){
+					alert('Jugador ganandor ' + jugador_numero)
+					i = 10;
+				}	
+
+
+			}
+
+			
+		}
+
+
+	</script>
+
+</body>
+</html>
