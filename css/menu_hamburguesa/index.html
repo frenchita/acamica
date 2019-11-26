@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menu test</title>
+        <style type="text/css">
+            * {
+              margin: 0;
+              padding: 0;
+              border: 0;
+              box-sizing: border-box;
+            }
+
+            header {
+              width: 100%;
+              top: 0;
+              height: 20px;
+              min-height: 50px;
+              padding: 10px 30px;
+              background: #fff;
+              display: flex;
+              justify-content: space-between;
+              position: fixed;
+              z-index: 100; /* z-index alto para que quede por encima de todo */
+             
+            }
+
+            header nav ul {
+              width: 100%;
+              position: absolute;
+              display: flex;
+              flex-direction: column;
+              
+              top: 50px;
+              height: 0px;
+              right: 0;
+              list-style: none;
+              background: #FAFAFA;
+              overflow: hidden;
+            }
+
+
+            header nav ul li a {
+              text-decoration: none;
+              color: #000;
+              font-size: 16px;
+              padding: 15px;
+              display: block;
+              position: relative;
+            }
+
+            input[type="checkbox"]:checked ~ ul {
+              height: 240px;
+            }
+
+            .menu_elementos {
+              display: block;
+              padding-top: 5px;
+            }
+
+            .menu_elementos input {
+              display: block;
+              position: absolute;
+              opacity: 0;
+              width: 40px;
+              height: 32px;
+              z-index: 2;
+              
+            }
+
+            .menu_elementos span {
+              display: block;
+              position: relative;
+              width: 25px;
+              height: 3px;
+              margin-bottom: 5px;
+              background: #000;
+            }
+
+            .menu_elementos span:first-child {
+              transform-origin: -1px 3px;
+                transform-origin: 0% 0%;
+            }
+
+            .menu_elementos span:nth-last-child(2) {
+              transform-origin: -1px 3px;
+                transform-origin: 0% 100%;
+            }
+
+            .menu_elementos input:checked ~ span {
+              transform-origin: -1px 3px;
+              opacity: 1;
+              transform: rotate(45deg) translate(1px, 2px);
+            }
+
+            .menu_elementos input:checked ~ span:nth-last-child(3) {
+              opacity: 0;
+            }
+
+            .menu_elementos input:checked ~ span:nth-last-child(2) {
+              transform-origin: -1px 3px;
+              transform: rotate(-45deg) translate(-2px, 4px);
+            }
+
+
+
+
+            @media screen and (min-width: 768px) {
+              
+              header {
+                position: relative;
+              }
+              header nav ul {
+                display: flex;
+                flex-direction: row;
+                height: 80px;
+                position: absolute;
+                top: 0;
+                right: 10px;
+                width: auto;
+                background: #fff;
+                
+              }
+              header nav ul li a {
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 20px;
+                padding: 10px 15px 15px 10px;
+              }
+
+              .menu_elementos input, .menu_elementos span {
+                display: none;
+              }
+
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <img src="https://via.placeholder.com/30x30" alt="txt" class="logo" />
+            <nav>
+                <div class="menu_elementos">
+                    <input type="checkbox" id="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul>
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                        <li><a href="#">Item 3</a></li>
+                        <li><a href="#">Otro</a></li>
+                    </ul>
+                </div>
+            </nav>    
+        </header>
+    </body>
+</html>
