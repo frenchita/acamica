@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="text/javascript">
+
+		let mi_promesa1  = new Promise(function(resolve, reject){
+			setTimeout(function(){resolve('OK1')}, 500);
+		});
+
+		let mi_promesa2  = new Promise(function(resolve, reject){
+			setTimeout(function(){resolve('OK2')}, 400);
+			/*
+			Si la primera respuesta de una promesa es rechaza, el flow del código
+			continuará por el .catch sin importar que el resto sea "resolve" 
+
+			setTimeout(function(){reject('Reject 2')}, 400);
+			*/
+		});
+
+		let mi_promesa3  = new Promise(function(resolve, reject){
+			setTimeout(function(){resolve('OK3')}, 600);
+		});
+
+		Promise.race([mi_promesa1, mi_promesa2, mi_promesa3])
+			.then(function(respuesta){
+				console.log(respuesta);
+			}).catch(function(respuesta){
+				console.log(respuesta);
+			})
+
+			
+	</script>
+
+
+	</body>
+</html>

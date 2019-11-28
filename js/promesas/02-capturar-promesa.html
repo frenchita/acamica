@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="text/javascript">
+
+		let mi_promesa  = new Promise(function(resolve, reject){
+			
+			if(true){ /* cambiar a true o false */
+					resolve('OK');
+			}else{
+					reject('ERROR');
+			}
+		});
+
+		mi_promesa
+			.then(function(respuesta){
+				console.log(respuesta);
+			}).catch(function(respuesta){
+				console.log(respuesta);
+			})
+
+			
+	</script>
+
+
+	</body>
+</html>

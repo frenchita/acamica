@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="text/javascript">
+
+		let mi_promesa1  = new Promise(function(resolve, reject){
+			resolve('OK1');
+		});
+
+		let mi_promesa2  = new Promise(function(resolve, reject){
+			resolve('OK2');
+		});
+
+		let mi_promesa3  = new Promise(function(resolve, reject){
+			resolve('OK3');
+			/* 
+			Al haber una promesa rechazada Promise.all continua su flow dentro del .catch()
+			reject('ERROR 3');
+			*/
+
+		});
+
+		Promise.all([mi_promesa1, mi_promesa2, mi_promesa3])
+			.then(function(respuesta){
+				console.log(respuesta);
+			}).catch(function(respuesta){
+				console.log(respuesta);
+			})
+
+			
+	</script>
+
+
+	</body>
+</html>

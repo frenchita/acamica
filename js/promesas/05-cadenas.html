@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="text/javascript">
+
+		let promesa1 = new Promise((resolve, reject) => { 
+		  resolve("uno")
+		}); 
+		let promesa2 = new Promise((resolve, reject) => { 
+		  reject("dos");
+		});
+		let promesa3 = new Promise((resolve, reject) => {
+		  resolve("tres");
+		});
+
+
+		promesa1
+		.then(function(respuesta){
+			  console.log(respuesta);
+			  return promesa2;
+		}).then(function(segunda){
+			  console.log(segunda);
+			  return promesa3;
+		}).then(function(tercera){
+			  /* No llega a ejecutarse debido a 
+			  que la promesa 2 fue rechazada */
+		  	  console.log(tercera);
+		}).catch(function(error){
+			  /*Captura cualquier error */
+		      console.log('Error: ' + error);	
+		});
+
+
+			
+	</script>
+
+
+	</body>
+</html>
