@@ -5,11 +5,13 @@
 
 	<script type="text/javascript">
 
+		/* Cambiar cualquier por reject */
+
 		let promesa1 = new Promise((resolve, reject) => { 
 		  resolve("uno")
 		}); 
 		let promesa2 = new Promise((resolve, reject) => { 
-		  reject("dos");
+		  resolve("dos");
 		});
 		let promesa3 = new Promise((resolve, reject) => {
 		  resolve("tres");
@@ -24,8 +26,6 @@
 			  console.log(segunda);
 			  return promesa3;
 		}).then(function(tercera){
-			  /* No llega a ejecutarse debido a 
-			  que la promesa 2 fue rechazada */
 		  	  console.log(tercera);
 		}).catch(function(error){
 			  /*Captura cualquier error */
